@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OPC UA Monitor</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; margin: 20px auto; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">OPC UA Machine Dashboard</h1>
+    <table>
+        <tr>
+            <th>Machine</th>
+            <th>Temperature (°C)</th>
+            <th>Pressure (bar)</th>
+        </tr>
+        {% for machine, values in data.items() %}
+        <tr>
+            <td>{{ machine }}</td>
+            <td>{{ values.temperature }}</td>
+            <td>{{ values.pressure }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

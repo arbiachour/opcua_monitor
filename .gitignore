@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# Virtualenv
+env/
+venv/
+ENV/
+
+# Certs and sensitive files
+*.pem
+*.der
+certs/
+config.py  # Optional: if it contains real secrets, ignore this
+
+# Flask cache
+instance/
+*.db
